@@ -44,11 +44,34 @@ function AgeGroups() {
     this.senior.push(i);
   }
 
-  function ShowTimes() {
-    this.morning = "Morning";
-    this.matinee = "Matinee";
-    this.evening = "Evening";
-  }
+function ShowTimes() {
+  this.morning = "Morning";
+  this.matinee = "Matinee";
+  this.evening = "Evening";
+}
 
 
-  //UI Logic
+
+
+//UI Logic
+
+function handleformsubmission();
+  event.preventDefault();
+  const tickets = new Tickets();
+  userMovieRequest = userChoice;
+  // do the same for time & age group
+
+  
+
+function movieSelect();
+  document.querySelector(".movie-selection").setAttribute("class", "not-chosen");
+  const userChoice = event.target.id;
+  document.querySelector(userChoice).setAttribute("class", "chosen");
+  return userChoice
+
+
+window.addEventListener("load", function() {
+  document.querySelector("form").addEventListener("submit", handleformsubmission);
+  document.querySelector("div#movie-selection").addEventListener("click", movieSelect);
+  
+})
