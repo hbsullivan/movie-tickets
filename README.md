@@ -33,6 +33,13 @@ Test: "create constructor for Tickets() with three child objects: showtime, age,
 Code: Tickets()
 Expected Output: Tickets {{} {} {}}
 
+
+Describe: Movies()
+
+Test: "create constructor for Movies() with three keys of newRelease, oldRelease, oldRelease2
+Code: Movies();
+Expected Output: Movies {"Top Gun", "Halloween", "Last House on the Left"}
+
 ## Known Bugs
 
 * _Any known issues_

@@ -14,5 +14,41 @@ function Tickets() {
   this.movie = {};
   this.showTimes = {};
   this.age = {};
-  this.currentId = 0;
 }
+
+Tickets.prototype.populateTicket = function() {
+  this.movie = new Movies();
+  this.showTimes = new ShowTimes();
+  this.age = new AgeGroups();
+}
+
+
+function Movies() {
+  this.newRelease = "Top Gun"
+  this.oldRelease1 = "Halloween"
+  this.oldRelease2 = "Last House on the Left"
+}
+
+function AgeGroups() {
+  if (i = 0, i <= 12, i++) {
+    // this.child = [];
+    this.child.push(i);
+  } else if  (i > 12 && i <= 21, i++) {
+    // this.student = [];
+    this.student.push(i);
+  } else if (i > 22 && i <= 64, i++) {
+    // this.adult = [];
+    this.adult.push(i);
+  } else  (i > 64 && i <= 100, i++)
+    // this.senior = [];
+    this.senior.push(i);
+  }
+
+  function ShowTimes() {
+    this.morning = "Morning";
+    this.matinee = "Matinee";
+    this.evening = "Evening";
+  }
+
+
+  //UI Logic
